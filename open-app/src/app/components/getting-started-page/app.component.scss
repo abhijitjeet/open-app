@@ -1,0 +1,102 @@
+@import "./../../variable.scss";
+
+.small-blob {
+  background: transparent url('./../../../assets/images/blob-small.svg') 0% 0% no-repeat padding-box;
+  opacity: 1;
+  top: 213px;
+  left: -179px;
+  width: 571px;
+  height: 572px;
+  position: absolute;
+}
+
+.big-blob {
+  background: transparent url('./../../../assets/images/circle.svg') 0% 0% no-repeat padding-box;
+  opacity: 0.5;
+  position: absolute;
+  top: -227.9068603515625px;
+  left: 852px;
+  width: 1183px;
+  height: 1192px;
+  transform: matrix(0.12, -0.99, 0.99, 0.12, 0, 0);
+}
+
+mat-toolbar {
+  background: transparent;
+  margin-top: 30px;
+  position: fixed;
+  transition: 0.2s;
+
+  &.scrolled-toolbar {
+    margin-top: 0;
+    height: $toolbar-scroll-height;
+    background: $open-white;
+
+    .logo img {
+      height: $toolbar-scroll-height;
+    }
+  }
+
+  .logo {
+    position: absolute;
+    left: 120px;
+  }
+  
+  .nav-button-group {
+    position: absolute;
+    right: 120px;
+    height: $toolbar-height;
+  
+    div {
+      text-align: left;
+      font: normal normal normal 25px/34px Open Sans;
+      font-size: 25px;
+      letter-spacing: 0px;
+      color: $open-black;
+      opacity: 1;
+      margin: 0 25px;
+      cursor: pointer;
+      float: left;
+      line-height: $toolbar-height;
+  
+      &.text-only-button {
+        background: transparent;
+        border: 0;
+  
+        &:hover {
+          color: $open-purple-color;
+        }
+      }
+  
+      &.button-with-border {
+        box-shadow: 0px 0px 20px $open-shadow-black;
+        border: 2px solid $open-purple-color;
+        border-radius: 24px;
+        opacity: 1;
+        text-align: center;
+        font-size: 16px;
+
+        &.clear {
+          height: 41px;
+        }
+  
+        &.gradient {
+          background: transparent linear-gradient(90deg, $open-purple-color-light 0%, $open-purple-color 100%) 0% 0% no-repeat padding-box;
+          color: $open-white;
+          border: none;
+        }
+  
+        span {
+          margin: 12px 36px;
+        }
+
+        &:hover {
+          background: $open-purple-color;
+          color: $open-white;
+        }
+      }
+    }
+  }
+  
+}
+
