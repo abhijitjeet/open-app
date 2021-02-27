@@ -1,31 +1,11 @@
 @import "./../../variable.scss";
 
-.small-blob {
-  background: transparent url('./../../../assets/images/blob-small.svg') 0% 0% no-repeat padding-box;
-  opacity: 1;
-  top: 213px;
-  left: -179px;
-  width: 571px;
-  height: 572px;
-  position: absolute;
-}
-
-.big-blob {
-  background: transparent url('./../../../assets/images/circle.svg') 0% 0% no-repeat padding-box;
-  opacity: 0.5;
-  position: absolute;
-  top: -227.9068603515625px;
-  left: 852px;
-  width: 1183px;
-  height: 1192px;
-  transform: matrix(0.12, -0.99, 0.99, 0.12, 0, 0);
-}
-
 mat-toolbar {
   background: transparent;
   margin-top: 30px;
   position: fixed;
   transition: 0.2s;
+  z-index: 1;
 
   &.scrolled-toolbar {
     margin-top: 0;
@@ -97,6 +77,25 @@ mat-toolbar {
       }
     }
   }
-  
 }
 
+.separator-bold {
+  background: #000000 0% 0% no-repeat padding-box;
+  border-radius: 13px;
+  opacity: 0.7;
+  top: 376px;
+  left: 192px;
+  width: 236px;
+  height: 8px;
+  position: absolute;
+}
+
+.wave {
+  background: transparent url('./../../../assets/images/sol_wave_bg.svg') 0% 0% no-repeat padding-box;
+  opacity: 1;
+  top: 1209px;
+  left: 0.0001220703125px;
+  width: 1920px;
+  height: 936px;
+  position: relative;
+}

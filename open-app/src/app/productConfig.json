@@ -1,0 +1,48 @@
+[
+  {
+     "menuItems": ["Product", "Solution", "Pricing"],
+     "buttonItems": [
+         {
+             "name": "Login",
+             "property": "clear"
+         },
+         {
+             "name": "Get Started",
+             "property": "gradient"
+         }
+        ],
+    "infoCardContent": [
+        {
+            "header": "Quick cash disbursement",
+            "body": "Get terms loans that your business needs within 72 hrs",
+            "imageSource": "assets/images/GetPaidInstantly.png",
+            "position": { "top": "1137px", "left": "191px" }
+        },
+        {
+            "header": "Ace your business finances",
+            "body": "Manage banking, accounting & everything in between, on one platform",
+            "imageSource": "assets/images/freelancer_feature_icon_6@1.5x.png",
+            "position": { "top": "1261px", "left": "630px" }
+        },
+        {
+            "header": "Low-interest rate",
+            "body": "Achieve your financial goals with an amazing interest rate starting at 13% per annum",
+            "imageSource": "assets/images/Lowinterestrate.png",
+            "position": { "top": "1450px", "left": "191px" }
+        },
+        {
+            "header": "Loans to fight COVID-19",
+            "body": "Zero EMI for first 3 months on Back-to-Business loans of upto 1 lakh",
+            "imageSource": "assets/images/Covid.png",
+            "position": { "top": "1593px", "left": "630px" }
+        },
+        {
+            "header": "Zero Paperwork",
+            "body": "Get started instantly by submitting only your basic details & bank statements",
+            "imageSource": "assets/images/SecurePayments.png",
+            "position": { "top": "1786px", "left": "191px" }
+        }
+        
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+@mixin super-text-box-constant {
+  position: absolute;
+  font-size: 40px;
+  line-height: 49px;
+  font-family: Montserrat;
+  font-weight: 500;
+}
+
+.left-position {
+  @include super-text-box-constant();
+  top: 270px;
+  left: 189px;
+  width: 407px;
+  height: 98px;
+}

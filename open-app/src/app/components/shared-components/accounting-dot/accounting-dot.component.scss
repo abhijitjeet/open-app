@@ -1,0 +1,19 @@
+@mixin accounting-dots-constants {
+  background: transparent url('./../../../../assets/images/accounting_dots.svg') 0% 0% no-repeat padding-box;
+  opacity: 0.5;
+  width: 430px;
+  height: 70px;
+  position: absolute;
+}
+
+.mid-page {
+  @include accounting-dots-constants();
+  top: 796px;
+  left: 462px;
+}
+
+.right-page {
+  @include accounting-dots-constants();
+  top: 936px;
+  left: 1458px;
+}
