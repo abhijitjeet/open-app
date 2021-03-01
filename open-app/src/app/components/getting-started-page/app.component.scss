@@ -1,5 +1,20 @@
 @import "./../../variable.scss";
 
+@mixin button-constant {
+  box-shadow: 0px 0px 20px $open-shadow-black;
+  border: 2px solid $open-purple-color;
+  border-radius: 24px;
+  opacity: 1;
+  text-align: center;
+  font-size: 16px;
+}
+
+@mixin button-gradient-constant {
+  background: transparent linear-gradient(90deg, $open-purple-color-light 0%, $open-purple-color 100%) 0% 0% no-repeat padding-box;
+  color: $open-white;
+  border: none;
+}
+
 mat-toolbar {
   background: transparent;
   margin-top: 30px;
@@ -21,12 +36,12 @@ mat-toolbar {
     position: absolute;
     left: 120px;
   }
-  
+
   .nav-button-group {
     position: absolute;
     right: 120px;
     height: $toolbar-height;
-  
+
     div {
       text-align: left;
       font: normal normal normal 25px/34px Open Sans;
@@ -38,34 +53,27 @@ mat-toolbar {
       cursor: pointer;
       float: left;
       line-height: $toolbar-height;
-  
+
       &.text-only-button {
         background: transparent;
         border: 0;
-  
+
         &:hover {
           color: $open-purple-color;
         }
       }
-  
+
       &.button-with-border {
-        box-shadow: 0px 0px 20px $open-shadow-black;
-        border: 2px solid $open-purple-color;
-        border-radius: 24px;
-        opacity: 1;
-        text-align: center;
-        font-size: 16px;
+        @include button-constant();
 
         &.clear {
           height: 41px;
         }
-  
+
         &.gradient {
-          background: transparent linear-gradient(90deg, $open-purple-color-light 0%, $open-purple-color 100%) 0% 0% no-repeat padding-box;
-          color: $open-white;
-          border: none;
+          @include button-gradient-constant();
         }
-  
+
         span {
           margin: 12px 36px;
         }
@@ -90,6 +98,17 @@ mat-toolbar {
   position: absolute;
 }
 
+.short-separator-bold {
+  top: 1528px;
+  left: 1158px;
+  width: 120px;
+  height: 0px;
+  position: absolute;
+  border: 6px solid #707070;
+  opacity: 1;
+  border-radius: 10px;
+}
+
 .wave {
   background: transparent url('./../../../assets/images/sol_wave_bg.svg') 0% 0% no-repeat padding-box;
   opacity: 1;
@@ -98,4 +117,156 @@ mat-toolbar {
   width: 1920px;
   height: 936px;
   position: relative;
+}
+
+.eligibility-box {
+  top: 270px;
+  left: 1100px;
+  width: 688px;
+  height: 675px;
+  position: absolute;
+
+  .calculator {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 30px #0000000F;
+    border-radius: 20px;
+    width: 470px;
+    height: 666px;
+    position: absolute;
+
+    .calculator-header {
+      text-align: center;
+      margin: 15px;
+      font-size: 25px;
+      font-family: 'Open Sans';
+    }
+  }
+
+  .loan-amount {
+    float: right;
+    width: 30%;
+    position: relative;
+    background-color: $open-white;
+    width: 209px;
+    height: 450px;
+    top: 100px;
+    padding: 35px 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: transparent url('./../../../assets/images/purplewave.png') 0% 0% no-repeat padding-box;
+    background-size: contain;
+
+    .container {
+      margin-top: 60px;
+
+      h4 {
+        text-align: center;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 0.7;
+        font-size: 18px;
+        line-height: 22px;
+        font-family: Montserrat;
+        margin: 0;
+
+        &.amount {
+          opacity: 1;
+          font-size: 25px;
+          font-weight: 500;
+          line-height: 30px;
+        }
+      }
+
+      .container-button {
+        @include button-constant();
+        width: 160px;
+        height: 48px;
+        margin: auto 22px;
+        font-family: Montserrat;
+        font-size: 14px;
+        background-color: #FFFFFF;
+        color: #663399;
+        font-weight: 500;
+        cursor: pointer;
+
+        span {
+          line-height: 47px;
+        }
+
+        &:hover {
+          background-color: #4a2671;
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+
+  .slider-container {
+    padding-top: 20px;
+  }
+
+  .select-box,
+  .slide-toggle {
+    margin: 30px 60px;
+
+    .header {
+      color: #222222;
+      font-size: 15px;
+      font-family: Montserrat;
+      margin: 0;
+
+      span mat-slide-toggle {
+        float: right;
+      }
+    }
+
+    input {
+      font-size: 25px;
+      font-family: Montserrat;
+      font-weight: 600;
+      border-bottom: 1px solid rgb(153 153 153 / 50%);
+    }
+
+    mat-form-field {
+      width: 100%;
+    }
+  }
+}
+
+.description {
+  color: #777777;
+  font-size: 18px;
+  top: 1561px;
+  left: 1158px;
+  width: 490px;
+  height: 44px;
+  position: absolute;
+  font-family: Montserrat;
+}
+
+.clear-button {
+  position: absolute;
+  top: 1704px;
+  left: 1191px;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #663399;
+  opacity: 1;
+  font-size: 18px;
+  border: 2px solid #663399;
+  border-radius: 24px;
+  width: 279px;
+  height: 58px;
+  font-family: Montserrat;
+  font-weight: 500;
+  cursor: pointer;
+
+  span {
+    line-height: 55px;
+  }
+
+  &:hover {
+    background-color: #4a2671;
+    color: #FFFFFF;
+  }
 }

@@ -4,5 +4,5 @@ export interface InfoCard {
   header: string;
   body: string;
   imageSource: string;
-  position: Position
+  position: Position;
 }

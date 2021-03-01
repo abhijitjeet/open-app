@@ -43,6 +43,29 @@
             "position": { "top": "1786px", "left": "191px" }
         }
         
-    ]
+    ],
+    "eligibilityCalculator": {
+        "header": "Eligibility Calculator",
+        "sliderProperties": [
+            {
+                "header": "Monthly Income",
+                "minValue": 100000,
+                "maxValue": 300000,
+                "showLabel": true
+            },
+            {
+                "header": "Monthly Expense",
+                "minValue": 10000,
+                "maxValue": 200000,
+                "showLabel": false
+            }
+        ],
+        "selectBox": {
+            "header": "Repayment Tenure",
+            "emiTenureStart": 3,
+            "numberOfTenures": 5,
+            "emiTenureVariable": 3 
+        }
+    }
   }
 ]

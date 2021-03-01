@@ -13,3 +13,11 @@
   width: 407px;
   height: 98px;
 }
+
+.right-position {
+  @include super-text-box-constant();
+  top: 1377px;
+  left: 1158px;
+  width: 490px;
+  height: 98px;
+}

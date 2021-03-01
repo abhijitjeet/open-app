@@ -1,30 +1,118 @@
 <small-blob></small-blob>
+
 <big-blob></big-blob>
-<mat-toolbar id="toolbar">
-  <div class="logo">
-    <img src="assets/images/logo.png">
-  </div>
-  <div class="nav-button-group">
-      <div *ngFor="let menuItem of menuItems" class="text-only-button">{{menuItem}}</div>
-      <div *ngFor="let buttonItem of buttonItems" class="button-with-border" [ngClass]="{'clear': buttonItem.property == 'clear', 'gradient': buttonItem.property == 'gradient'}">
+
+<section>
+  <mat-toolbar id="toolbar">
+
+    <div class="logo">
+      <img src="assets/images/logo.png">
+    </div>
+
+    <div class="nav-button-group">
+
+      <div *ngFor="let menuItem of menuItems" class="text-only-button">
+        {{menuItem}}
+      </div>
+
+      <div *ngFor="let buttonItem of buttonItems" class="button-with-border"
+        [ngClass]="{'clear': buttonItem.property == 'clear', 'gradient': buttonItem.property == 'gradient'}">
         <span>{{buttonItem.name}}</span>
       </div>
-  </div>
-</mat-toolbar>
-<accounting-dot [position]="'mid'"></accounting-dot>
-<accounting-dot [position]="'right'"></accounting-dot>
-<super-text-box [message]="'We make it Super Simple'" [position]="'left'"></super-text-box>
-<div class="separator-bold"></div>
-<image-box [imageSource]="'assets/images/collect_img-video.png'" [position]="{ top: '466px', left: '136px' }"></image-box>
-<div class="wave"></div>
 
-<info-cards *ngFor="let infoCard of infoCardData"
-    [position]="infoCard.position"
-    [imageSource]="infoCard.imageSource"
-    [header]="infoCard.header"
-    [body]="infoCard.body">
-</info-cards>
-<!-- <info-cards [position]="{ top: '1261px', left: '630px' }" [imageSource]="'assets/images/freelancer_feature_icon_6@1.5x.png'" [header]="'Ace your business finances'" [body]="'Manage banking, accounting & everything in between, on one platform'"></info-cards>
-<info-cards [position]="{ top: '1450px', left: '191px' }" [imageSource]="'assets/images/Lowinterestrate.png'" [header]="'Low-interest rate'" [body]="'Achieve your financial goals with an amazing interest rate starting at 13% per annum'"></info-cards>
-<info-cards [position]="{ top: '1593px', left: '630px' }" [imageSource]="'assets/images/Covid.png'" [header]="'Loans to fight COVID-19'" [body]="'Zero EMI for first 3 months on Back-to-Business loans of upto 1 lakh'"></info-cards>
-<info-cards [position]="{ top: '1786px', left: '191px' }" [imageSource]="'assets/images/SecurePayments.png'" [header]="'Zero Paperwork'" [body]="'Get started instantly by submitting only your basic details & bank statements'"></info-cards> -->
+    </div>
+
+  </mat-toolbar>
+</section>
+
+<section>
+  <accounting-dot [position]="'mid'"></accounting-dot>
+
+  <accounting-dot [position]="'right'"></accounting-dot>
+
+  <super-text-box [message]="'We make it Super Simple'" [position]="'left'">
+  </super-text-box>
+
+  <div class="separator-bold"></div>
+
+  <image-box [imageSource]="'assets/images/collect_img-video.png'" [position]="{ top: '466px', left: '136px' }">
+  </image-box>
+
+  <div class="eligibility-box">
+    <div class="calculator">
+      <h4 class="calculator-header">{{eligibilityData.header}}</h4>
+      <div *ngFor="let sliderItem of eligibilityData.sliderProperties" class="slider-container">
+        <amount-slider [sliderHeader]="sliderItem.header" [sliderMinValue]="sliderItem.minValue"
+          [sliderMaxValue]="sliderItem.maxValue" [showSliderLabels]="sliderItem.showLabel"></amount-slider>
+      </div>
+      <div class="select-box">
+        <h4 class="header">{{eligibilityData.selectBox.header}}</h4>
+        <mat-form-field>
+          <mat-select [(value)]="selected">
+            <mat-option *ngFor="let emiSelect of emiSelectValue" value="{{emiSelect.value}}">
+              {{emiSelect.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="slide-toggle">
+        <h4 class="header">
+          Do you have any existing loan?
+          <span>
+            <mat-slide-toggle [disableRipple]="true"></mat-slide-toggle>
+          </span>
+        </h4>
+      </div>
+      <div class="slide-toggle">
+        <h4 class="header">EMI of existing loan (optional)</h4>
+        <input (keydown)="onKeyDown($event)" matInput placeholder="{{'0' | currency:'INR': 'symbol':'1.0-2'}}">
+      </div>
+    </div>
+    <div class="loan-amount">
+      <div class="container">
+        <h4>
+          Loan Amount
+        </h4>
+        <h4 class="amount">
+          {{'100000' | currency:'INR': 'symbol':'1.0-2'}}
+        </h4>
+      </div>
+      <div class="container">
+        <h4>
+          Your EMI will be
+        </h4>
+        <h4 class="amount">
+          {{'15000' | currency:'INR': 'symbol':'1.0-2'}}
+        </h4>
+      </div>
+      <div class="container">
+        <div class="container-button">
+          <span>GET MONEY</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="wave"></div>
+
+  <info-cards *ngFor="let infoCard of infoCardData" [position]="infoCard.position" [imageSource]="infoCard.imageSource"
+    [header]="infoCard.header" [body]="infoCard.body">
+  </info-cards>
+
+  <div>
+    <super-text-box [message]="'Boost your business with Open'" [position]="'right'">
+    </super-text-box>
+  
+    <div class="short-separator-bold"></div>
+  
+    <p class="description">
+      Get your hands on a term loan that’s crafted for your business
+    </p>
+  </div>
+  <div class="clear-button">
+    <span>Get an Open Account</span>
+  </div>
+</section>

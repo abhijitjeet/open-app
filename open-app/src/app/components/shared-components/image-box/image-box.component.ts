@@ -10,7 +10,6 @@ export class ImageBoxComponent implements AfterViewInit{
   @Input() imageSource: string | undefined;
   @Input() position: Position | undefined;
   @ViewChild('imageBox') imageBox: ElementRef | undefined;
-
   constructor (
     private renderer: Renderer2
   ) {}

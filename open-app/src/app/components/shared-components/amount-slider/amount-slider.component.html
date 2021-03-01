@@ -1,0 +1,9 @@
+<div class="slider">
+  <h4 class="amount-header">{{sliderHeader}}</h4>
+  <h2 class="amount">{{amount | currency:'INR': 'symbol':'1.0-2'}}</h2>
+  <mat-slider [min]="sliderMinValue" [max]="sliderMaxValue" (input)="sliderAmount($event)"></mat-slider>
+  <div class="slider-labels" *ngIf="showSliderLabels">
+    <span class="start">{{sliderMinValue | currency:'INR': 'symbol':'1.0-2'}}</span>
+    <span class="end">{{sliderMaxValue | currency:'INR': 'symbol':'1.0-2'}}</span>
+  </div>
+</div>
