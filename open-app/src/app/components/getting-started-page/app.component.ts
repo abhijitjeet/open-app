@@ -25,13 +25,18 @@ export class AppComponent implements OnInit {
       emiTenureStart: 0,
       emiTenureVariable: 0,
       numberOfTenures: 0
-    }
+    },
+    slideToggleMessage: '',
+    emiExistingLoan: ''
   };
   productData: ProductData = {
     buttonItems: [],
     eligibilityCalculator: this.eligibilityData,
     infoCardContent: this.infoCardData,
-    menuItems: []
+    menuItems: [],
+    textBoxValues: [],
+    topics: [],
+    loanCalculationTopic: []
   };
 
   ngOnInit(): void {

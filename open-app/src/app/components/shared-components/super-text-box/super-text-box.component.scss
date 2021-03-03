@@ -1,6 +1,8 @@
+@import './../../../variable.scss';
+
 @mixin super-text-box-constant {
   position: absolute;
-  font-size: 40px;
+  font-size: $font-size-xxlarge;
   line-height: 49px;
   font-family: Montserrat;
   font-weight: 500;

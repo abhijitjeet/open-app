@@ -30,7 +30,7 @@
 
   <accounting-dot [position]="'right'"></accounting-dot>
 
-  <super-text-box [message]="'We make it Super Simple'" [position]="'left'">
+  <super-text-box [message]="productData.textBoxValues[0]" [position]="'left'">
   </super-text-box>
 
   <div class="separator-bold"></div>
@@ -57,21 +57,21 @@
       </div>
       <div class="slide-toggle">
         <h4 class="header">
-          Do you have any existing loan?
+          {{eligibilityData.slideToggleMessage}}
           <span>
             <mat-slide-toggle [disableRipple]="true"></mat-slide-toggle>
           </span>
         </h4>
       </div>
       <div class="slide-toggle">
-        <h4 class="header">EMI of existing loan (optional)</h4>
+        <h4 class="header">{{eligibilityData.emiExistingLoan}}</h4>
         <input (keydown)="onKeyDown($event)" matInput placeholder="{{'0' | currency:'INR': 'symbol':'1.0-2'}}">
       </div>
     </div>
     <div class="loan-amount">
       <div class="container">
         <h4>
-          Loan Amount
+          {{productData.loanCalculationTopic[0]}}
         </h4>
         <h4 class="amount">
           {{'100000' | currency:'INR': 'symbol':'1.0-2'}}
@@ -79,7 +79,7 @@
       </div>
       <div class="container">
         <h4>
-          Your EMI will be
+          {{productData.loanCalculationTopic[1]}}
         </h4>
         <h4 class="amount">
           {{'15000' | currency:'INR': 'symbol':'1.0-2'}}
@@ -87,7 +87,7 @@
       </div>
       <div class="container">
         <div class="container-button">
-          <span>GET MONEY</span>
+          <span>{{productData.topics[0]}}</span>
         </div>
       </div>
     </div>
@@ -103,16 +103,16 @@
   </info-cards>
 
   <div>
-    <super-text-box [message]="'Boost your business with Open'" [position]="'right'">
+    <super-text-box [message]="productData.textBoxValues[1]" [position]="'right'">
     </super-text-box>
   
     <div class="short-separator-bold"></div>
   
     <p class="description">
-      Get your hands on a term loan that’s crafted for your business
+      {{productData.textBoxValues[2]}}
     </p>
   </div>
   <div class="clear-button">
-    <span>Get an Open Account</span>
+    <span>{{productData.topics[1]}}</span>
   </div>
 </section>

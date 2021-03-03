@@ -7,4 +7,7 @@ export interface ProductData {
   buttonItems: ButtonItem[];
   infoCardContent: InfoCard[];
   eligibilityCalculator: EligibilityCalculatorProperties;
+  textBoxValues: string[];
+  topics: string[];
+  loanCalculationTopic: string[];
 }

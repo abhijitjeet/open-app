@@ -6,7 +6,7 @@
   border-radius: 24px;
   opacity: 1;
   text-align: center;
-  font-size: 16px;
+  font-size: $font-size-s;
 }
 
 @mixin button-gradient-constant {
@@ -45,7 +45,7 @@ mat-toolbar {
     div {
       text-align: left;
       font: normal normal normal 25px/34px Open Sans;
-      font-size: 25px;
+      font-size: $font-size-m;
       letter-spacing: 0px;
       color: $open-black;
       opacity: 1;
@@ -88,7 +88,7 @@ mat-toolbar {
 }
 
 .separator-bold {
-  background: #000000 0% 0% no-repeat padding-box;
+  background: $open-black-2 0% 0% no-repeat padding-box;
   border-radius: 13px;
   opacity: 0.7;
   top: 376px;
@@ -104,7 +104,7 @@ mat-toolbar {
   width: 120px;
   height: 0px;
   position: absolute;
-  border: 6px solid #707070;
+  border: 6px solid $open-grey;
   opacity: 1;
   border-radius: 10px;
 }
@@ -127,8 +127,8 @@ mat-toolbar {
   position: absolute;
 
   .calculator {
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    box-shadow: 0px 0px 30px #0000000F;
+    background: $open-white 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 30px $open-shadow-black-2;
     border-radius: 20px;
     width: 470px;
     height: 666px;
@@ -137,7 +137,7 @@ mat-toolbar {
     .calculator-header {
       text-align: center;
       margin: 15px;
-      font-size: 25px;
+      font-size: $font-size-m;
       font-family: 'Open Sans';
     }
   }
@@ -162,16 +162,16 @@ mat-toolbar {
       h4 {
         text-align: center;
         letter-spacing: 0px;
-        color: #FFFFFF;
+        color: $open-white;
         opacity: 0.7;
-        font-size: 18px;
+        font-size: $font-size-regular;
         line-height: 22px;
         font-family: Montserrat;
         margin: 0;
 
         &.amount {
           opacity: 1;
-          font-size: 25px;
+          font-size: $font-size-m;
           font-weight: 500;
           line-height: 30px;
         }
@@ -183,10 +183,11 @@ mat-toolbar {
         height: 48px;
         margin: auto 22px;
         font-family: Montserrat;
-        font-size: 14px;
-        background-color: #FFFFFF;
-        color: #663399;
+        font-size: $font-size-xs;
+        background-color: $open-white;
+        color: $open-purple-color;
         font-weight: 500;
+        text-transform: uppercase;
         cursor: pointer;
 
         span {
@@ -194,8 +195,8 @@ mat-toolbar {
         }
 
         &:hover {
-          background-color: #4a2671;
-          color: #FFFFFF;
+          background-color: $open-hover-purple;
+          color: $open-white;
         }
       }
     }
@@ -210,8 +211,8 @@ mat-toolbar {
     margin: 30px 60px;
 
     .header {
-      color: #222222;
-      font-size: 15px;
+      color: $open-black;
+      font-size: $font-size-xs2;
       font-family: Montserrat;
       margin: 0;
 
@@ -221,7 +222,7 @@ mat-toolbar {
     }
 
     input {
-      font-size: 25px;
+      font-size: $font-size-m;
       font-family: Montserrat;
       font-weight: 600;
       border-bottom: 1px solid rgb(153 153 153 / 50%);
@@ -234,8 +235,8 @@ mat-toolbar {
 }
 
 .description {
-  color: #777777;
-  font-size: 18px;
+  color: $open-grey-2;
+  font-size: $font-size-regular;
   top: 1561px;
   left: 1158px;
   width: 490px;
@@ -250,10 +251,10 @@ mat-toolbar {
   left: 1191px;
   text-align: center;
   letter-spacing: 0px;
-  color: #663399;
+  color: $open-purple-color;
   opacity: 1;
-  font-size: 18px;
-  border: 2px solid #663399;
+  font-size: $font-size-regular;
+  border: 2px solid $open-purple-color;
   border-radius: 24px;
   width: 279px;
   height: 58px;
@@ -266,7 +267,7 @@ mat-toolbar {
   }
 
   &:hover {
-    background-color: #4a2671;
-    color: #FFFFFF;
+    background-color: $open-hover-purple;
+    color: $open-white;
   }
 }

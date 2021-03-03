@@ -65,7 +65,22 @@
             "emiTenureStart": 3,
             "numberOfTenures": 5,
             "emiTenureVariable": 3 
-        }
-    }
+        },
+        "slideToggleMessage": "Do you have any existing loan?",
+        "emiExistingLoan": "EMI of existing loan (optional)"
+    },
+    "textBoxValues": [
+        "We make it Super Simple",
+        "Boost your business with Open",
+        "Get your hands on a term loan that’s crafted for your business"
+    ],
+    "topics": [
+        "Get Money",
+        "Get an Open Account"
+    ],
+    "loanCalculationTopic": [
+        "Loan Amount",
+        "Your EMI will be"
+    ]
   }
 ]
